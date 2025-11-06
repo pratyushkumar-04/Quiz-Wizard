@@ -1,0 +1,28 @@
+<div class="questions-container">
+  <h1 class="heading">📚 Quiz Questions</h1>
+
+  <table class="question-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Content</th>
+        <th>Option A</th>
+        <th>Option B</th>
+        <th>Option C</th>
+        <th>Option D</th>
+        <th>Correct</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let q of questions; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ q.content }}</td>
+        <td>{{ q.optionA }}</td>
+        <td>{{ q.optionB }}</td>
+        <td>{{ q.optionC }}</td>
+        <td>{{ q.optionD }}</td>
+        <td class="correct-answer">{{ q.correctAnswer }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

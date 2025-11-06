@@ -1,0 +1,30 @@
+<div class="user-dashboard">
+
+  <!-- Welcome Box -->
+  <div class="welcome-box">
+    <img src="assets/avtar.avif" alt="Avatar" class="user-avatar" />
+    <div class="welcome-text">
+      <h2>Welcome back, {{ user?.username }} 👋</h2>
+      <p>Email: {{ user?.email }}</p>
+    </div>
+  </div>
+
+  <!-- Quote Section -->
+  <div class="quote-box">
+    <h3>✨ Motivation</h3>
+    <p>{{ currentQuote }}</p>
+  </div>
+
+  <!-- Fun Fact Section -->
+  <div class="fun-fact-box">
+    <h3>🧠 Did You Know?</h3>
+    <p>{{ currentFact }}</p>
+  </div>
+
+  <!-- Daily Challenge -->
+  <div class="daily-challenge-box">
+    <h3>🔥 Daily Challenge</h3>
+    <p>Have you taken a quiz today? Keep your streak alive!</p>
+  </div>
+
+</div>

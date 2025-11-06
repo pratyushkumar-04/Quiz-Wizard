@@ -1,0 +1,25 @@
+<div class="add-question-container">
+  <div class="question-form-card">
+    <h2 class="form-title">📝 Add a Question</h2>
+
+    <form (ngSubmit)="addQuestion()" #questionForm="ngForm" class="form-body">
+      <input type="text" placeholder="Question" [(ngModel)]="question.content" name="content" required />
+
+      <input type="text" placeholder="Option A" [(ngModel)]="question.optionA" name="optionA" required />
+      <input type="text" placeholder="Option B" [(ngModel)]="question.optionB" name="optionB" required />
+      <input type="text" placeholder="Option C" [(ngModel)]="question.optionC" name="optionC" required />
+      <input type="text" placeholder="Option D" [(ngModel)]="question.optionD" name="optionD" required />
+
+      <input type="text" placeholder="Correct Answer" [(ngModel)]="question.correctAnswer" name="correctAnswer" required />
+
+      <div *ngIf="!question.categoryId">
+        <select [(ngModel)]="question.categoryId" name="categoryId" required>
+          <option value="" disabled selected>Select Category</option>
+          <option *ngFor="let cat of categories" [value]="cat.id">{{ cat.name }}</option>
+        </select>
+      </div>
+
+      <button type="submit">➕ Add Question</button>
+    </form>
+  </div>
+</div>

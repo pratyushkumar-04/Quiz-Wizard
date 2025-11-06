@@ -1,0 +1,190 @@
+.homepage-container {
+  margin-top: 60px;
+  background-color: #2E2E2E;
+  color: #FFFFFF;
+  padding: 2rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Hero section */
+.hero-section {
+  padding: 4rem 1rem;
+  background: #3C3C3C;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.hero-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.inline-bulb {
+  width: 60px;
+  filter: drop-shadow(0 0 12px #FFD700);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); opacity: 1; }
+  50%  { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.primary-cta:hover {
+  transform: scale(1.05);
+  background-color: #ffc107;
+}
+
+
+.hero-title h1 {
+  font-size: 3rem;
+  color: #FFD700;
+  margin: 0;
+}
+
+.inline-bulb {
+  width: 60px;
+  animation: glow 2s infinite alternate ease-in-out;
+  filter: drop-shadow(0 0 10px #ffe347);
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: #cccccc;
+}
+
+/* Your custom image */
+.hero-image-container {
+  margin: 2rem 0;
+}
+.hero-image {
+  width: 250px;
+  max-width: 80%;
+  filter: drop-shadow(0 0 8px #ffffff2a);
+  border-radius: 12px;
+}
+
+/* Floating question marks */
+.floating-question {
+  position: absolute;
+  font-size: 2rem;
+  color: #FFD700;
+  animation: floatUp 4s ease-in-out infinite;
+  left: 10%;
+  top: 10%;
+  opacity: 0.5;
+}
+
+.floating-question.delay-1 {
+  left: 80%;
+  top: 20%;
+  animation-delay: 1.5s;
+}
+
+.floating-question.delay-2 {
+  left: 50%;
+  top: 30%;
+  animation-delay: 3s;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+}
+
+@keyframes glow {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px #ffe347);
+  }
+  100% {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 25px #ffea7a);
+  }
+}
+
+
+/* CTA */
+.primary-cta {
+  background-color: #FFD700;
+  color: #1A1A1A;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.primary-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(255, 215, 0, 0.5);
+}
+
+/* Divider */
+.divider {
+  display: block;
+  margin-top: -3rem;
+  width: 100%;
+}
+
+/* Feature section and CTA banner same as before */
+.features-section h2 {
+  font-size: 2rem;
+  color: #FFA500;
+  margin-bottom: 1rem;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.feature-item {
+  background-color: #444;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s;
+}
+
+.feature-item:hover {
+  transform: scale(1.03);
+}
+
+.feature-item i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.feature-item h3 {
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+}
+
+.cta-banner-section {
+  background-color: #3C3C3C;
+  margin-top: 3rem;
+  padding: 2rem;
+  border-radius: 15px;
+  color: #ffffff;
+  border: 1px dashed #FFD700;
+}

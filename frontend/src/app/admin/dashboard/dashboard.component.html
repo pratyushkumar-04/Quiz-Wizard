@@ -1,0 +1,22 @@
+<div class="dashboard-container">
+  <h2>Welcome, Admin!</h2>
+  <p class="subtitle">You have the following privileges:</p>
+
+  <ul class="authority-list">
+    <li><i class="fas fa-user-shield"></i> Create & Manage Categories</li>
+    <li><i class="fas fa-question-circle"></i> Add & Edit Questions</li>
+    <li><i class="fas fa-users-cog"></i> View All Users</li>
+    <li><i class="fas fa-chart-bar"></i> Access Admin Reports</li>
+  </ul>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3>{{ categoryCount }}</h3>
+      <p>Total Categories</p>
+    </div>
+    <div class="stat-card">
+      <h3>{{ userCount }}</h3>
+      <p>Registered Users</p>
+    </div>
+  </div>
+</div>

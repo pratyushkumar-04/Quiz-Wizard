@@ -1,0 +1,20 @@
+<div class="quiz-container" *ngIf="questions.length > 0">
+    <h2>Question {{ currQuestionIndx + 1 }} of {{ questions.length }}</h2>
+
+    <div class="question-box">
+        <p>{{ questions[currQuestionIndx].content }}</p>
+        <div class="options">
+            <button *ngFor="let option of ['optionA', 'optionB', 'optionC', 'optionD']"
+                [class.selected]="selectedanswers[currQuestionIndx] === questions[currQuestionIndx][option]"
+                (click)="selectanswer(questions[currQuestionIndx][option])">
+                {{ questions[currQuestionIndx][option] }}
+            </button>
+        </div>
+    </div>
+
+    <div class="navigation-buttons">
+<button *ngIf="currQuestionIndx > 0" (click)="prevQuestion()">Previous</button>
+<button *ngIf="currQuestionIndx < questions.length - 1" (click)="nextQuestion()">Next</button>
+        <button (click)="submitQuiz()">Submit</button>
+    </div>
+</div>

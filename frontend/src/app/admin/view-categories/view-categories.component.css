@@ -1,0 +1,55 @@
+/* Main content area */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #2E2E2E; /* Deep Slate for dark mode */
+  color: #E0E0E0; /* Light gray for text readability */
+}
+
+.main-content h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #FFFFFF; /* White for high contrast on headings */
+}
+
+/* Table styling */
+.category-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #3A3A3A; /* Slightly lighter gray for table background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Darker shadow for dark mode */
+}
+
+.category-table th,
+.category-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #4A4A4A; /* Darker border for visibility */
+  color: #E0E0E0; /* Light gray for table text */
+}
+
+.category-table th {
+  background-color: #454545; /* Darker gray for headers */
+  font-weight: bold;
+  color: #FFFFFF; /* White for header text */
+}
+
+.category-table tr:hover {
+  background-color: #4A4A4A; /* Subtle hover effect for dark mode */
+}
+
+.category-table button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  background-color: #2563eb; /* Keep blue-600, works well in dark mode */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.category-table button:hover {
+  background-color: #1e40af; /* Keep blue-800 for hover, complements dark theme */
+}

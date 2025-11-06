@@ -1,0 +1,23 @@
+<div class="update-profile-container">
+    <h2>Update Your Profile</h2>
+
+    <form (ngSubmit)="onUpdateProfile()" #profileForm="ngForm" class="profile-form">
+
+
+        <div class="form-group">
+            <label for="username">Full Name</label>
+            <input type="text" id="username" name="username" [(ngModel)]="user.username" required />
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" [(ngModel)]="user.email" required />
+        </div>
+
+
+
+        <button type="submit" class="update-button">Update Profile</button>
+
+        <p *ngIf="successMessage" class="success">{{ successMessage }}</p>
+        <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+    </form>
+</div>

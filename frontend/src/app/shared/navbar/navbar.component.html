@@ -1,0 +1,21 @@
+<nav>
+  <ul>
+    <div class="nav-left">
+      <li><a routerLink="/">Home 🏠</a></li>
+      <li *ngIf="userRole === 'ROLE_ADMIN'"><a routerLink="/admin/dashboard">Admin Dashboard</a></li>
+      <li *ngIf="userRole === 'ROLE_USER'"><a routerLink="/user/dashboard">User Dashboard</a></li>
+
+    </div>
+
+    <div class="nav-right">
+      <ng-container *ngIf="!isLoggedIn(); else loggedInBlock">
+        <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/register">Register</a></li>
+      </ng-container>
+
+      <ng-template #loggedInBlock>
+        <li><a (click)="logout()" style="cursor:pointer;">Logout🙋‍♂️ </a></li>
+      </ng-template>
+    </div>
+  </ul>
+</nav>

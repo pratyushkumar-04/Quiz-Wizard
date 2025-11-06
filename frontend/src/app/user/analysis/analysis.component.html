@@ -1,0 +1,23 @@
+<div class="analysis_container">
+  <div *ngIf="result">
+    <h2 class="text-2xl font-bold mb-4">Quiz Analysis</h2>
+    <p><strong>Score:</strong> {{ result.score }} / {{ result.questions }}</p>
+    <p><strong>Correct Answers:</strong> {{ result.correctanswers }}</p>
+    <p><strong>Category:</strong> {{ result.category.name }}</p>
+    <p><strong>Date:</strong> {{ result.attemptedAt | date: 'medium' }}</p>
+
+    <hr class="my-4" />
+
+    <div *ngFor="let q of result.questionResults; let i = index" class="mb-4 p-4 border rounded bg-white shadow">
+      <p><strong>Q{{ i + 1 }}:</strong> {{ q.question?.content }}</p>
+
+      <p [ngClass]="q.correct ? 'text-green-600 font-semibold' : 'text-red-600 font-semibold'">
+        Your Answer: {{ q.selectedAnswer }} 
+        <span *ngIf="!q.correct">✖</span>
+        <span *ngIf="q.correct">✔</span>
+      </p>
+
+      <p><strong>Correct Answer:</strong> {{ q.correctAnswer }}</p>
+    </div>
+  </div>
+</div>

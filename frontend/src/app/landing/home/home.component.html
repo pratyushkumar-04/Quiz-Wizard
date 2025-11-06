@@ -1,0 +1,71 @@
+<router-outlet></router-outlet>
+
+<div class="homepage-container">
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      
+      <!-- Heading with Glowing Bulb beside -->
+      <div class="hero-title">
+        <img src="assets/image.png" alt="Glowing Bulb" class="inline-bulb" />
+        <h1>Test Your Knowledge!</h1>
+
+      </div>
+      
+
+       <div class="hero-image-container">
+        <img src="assets/question.png" alt="Quiz Illustration" class="hero-image" />
+      </div>
+
+      <p class="tagline">
+        Dive into hundreds of engaging quizzes across diverse topics. Learn, challenge, and have fun!
+      </p>
+
+
+
+      <button (click)="categories()" class="primary-cta">Start a Quiz Now!</button>
+    </div>
+  </section>
+
+  
+  <!-- Features Section -->
+  <section class="features-section">
+    <h2>Why Play Quizzes With Us?</h2>
+
+    <div class="feature-grid">
+      <div class="feature-item">
+        <i class="icon-brain">🧠</i>
+        <h3>Sharpen Your Mind</h3>
+          
+
+        <p>Engage your brain with challenging questions designed to boost your cognitive skills.</p>
+      </div>
+      <div class="feature-item">
+        <i class="icon-lightbulb">💡</i>
+        <h3>Learn Something New</h3>
+        <p>Explore a vast array of topics and expand your knowledge with every quiz you take.</p>
+      </div>
+
+      <div class="feature-item">
+
+        <i class="icon-trophy">🏆</i>
+        <h3>Compete & Win</h3>
+        <p>Challenge friends, climb the leaderboards, and showcase your intellectual prowess.</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- CTA Banner for Unauthenticated Users -->
+  <div *ngIf="!loggedin">
+    <section class="cta-banner-section">
+      <h2>Ready to Challenge Yourself?</h2>
+      <p>Join our community of quiz enthusiasts today!</p>
+
+      <button (click)="register()" class="primary-cta">Create Your Free Account</button>
+    </section>
+  </div>
+
+</div>

@@ -1,0 +1,51 @@
+<div class="register-container">
+  <div class="register-box">
+    <h2 class="title">Create Account</h2>
+    <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+      
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="registerData.username"
+          required
+          placeholder="Choose a username"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="registerData.email"
+          #emailInput="ngModel"
+          required
+          email
+          placeholder="Enter your email"
+        />
+        <div class="error" *ngIf="emailInput.invalid && emailInput.touched">
+          <small *ngIf="emailInput.errors?.['required']">Email is required</small>
+          <small *ngIf="emailInput.errors?.['email']">Please enter a valid email</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="registerData.password"
+          required
+          placeholder="Create a password"
+        />
+      </div>
+
+      <button type="submit" [disabled]="registerForm.invalid">Register</button>
+    </form>
+  </div>
+</div>

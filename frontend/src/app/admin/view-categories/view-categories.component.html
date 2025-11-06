@@ -1,0 +1,22 @@
+ <main class="main-content">
+    <h1>Categories</h1>
+    <table class="category-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cat of categories">
+          <td>{{ cat.name }}</td>
+          <td>{{ cat.description }}</td>
+          <td>
+            <button (click)="navigateToAddQuestion(cat.id)">Add Question</button>
+            <button (click)="viewQuestions(cat.id)">View Questions</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>

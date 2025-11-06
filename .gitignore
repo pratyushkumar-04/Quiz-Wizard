@@ -1,0 +1,83 @@
+# =========================
+# Global
+# =========================
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+node_modules/
+dist/
+target/
+build/
+out/
+
+# =========================
+# Frontend (Angular)
+# =========================
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.angular/
+/frontend/.idea/
+/frontend/.vscode/
+/frontend/.env
+/frontend/.env.local
+
+# Environment files
+/frontend/src/environments/environment.ts
+/frontend/src/environments/environment.prod.ts
+
+# NPM & lock files
+/frontend/package-lock.json
+/frontend/yarn.lock
+
+# =========================
+# Backend (Spring Boot)
+# =========================
+/backend/target/
+/backend/.settings/
+/backend/.classpath
+/backend/.project
+/backend/.idea/
+/backend/.vscode/
+/backend/logs/
+/backend/tmp/
+/backend/.mvn/
+/backend/mvnw
+/backend/mvnw.cmd
+/backend/application.properties
+/backend/application.yml
+
+# =========================
+# OS Specific
+# =========================
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# =========================
+# IDEs
+# =========================
+# VS Code
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse / STS
+.project
+.classpath
+.settings/
+.apt_generated/
+.springBeans
+
+# =========================
+# Misc
+# =========================
+/*.env
+.env

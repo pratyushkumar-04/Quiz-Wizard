@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  background: radial-gradient(circle at top left, #ffe29d, #ffa8a8);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+}
+
+.analysis_container {
+  margin-top: 80px;
+  margin-left: 460px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 2.5rem;
+  max-width: 850px;
+  width: 100%;
+  animation: slideFade 0.6s ease-in-out;
+}
+
+@keyframes slideFade {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.analysis_container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #ff5c8d;
+}
+
+.analysis_container p {
+  font-size: 1.05rem;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+.analysis_container hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #ff8eb0, #ffb06b);
+  margin: 2rem 0;
+}
+
+.result-card {
+  background: linear-gradient(135deg, #fbeaff, #ffe4df);
+  border: 2px solid #f5c8ff;
+  border-radius: 14px;
+  padding: 1.4rem;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 6px 16px rgba(255, 132, 174, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.result-card:hover {
+  transform: scale(1.015);
+  box-shadow: 0 8px 22px rgba(255, 115, 164, 0.25);
+}
+
+.result-card strong {
+  font-weight: 600;
+  color: #ff2e73;
+}
+
+.text-green-600 {
+  background-color: #e6ffe7;
+  color: #20a938 !important;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.text-red-600 {
+  background-color: #ffe7e7;
+  color: #e22b2b !important;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.text-green-600 span,
+.text-red-600 span {
+  margin-left: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}

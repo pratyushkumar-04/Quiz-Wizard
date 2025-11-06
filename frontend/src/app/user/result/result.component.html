@@ -1,0 +1,19 @@
+<div class="results-container">
+  <h2 class="title">Your Past Quiz Attempts</h2>
+
+  <div *ngIf="results.length === 0">No previous attempts found.</div>
+
+  <div 
+    class="result-card" 
+    *ngFor="let r of results" 
+    (click)="goToAnalysis(r.id)" 
+    style="cursor: pointer;"
+  >
+    <h3>{{ r.categoryName }} Quiz</h3>
+    <p><strong>Score:</strong> {{ r.score }}/{{ r.questions }}</p>
+    <p><strong>Correct Answers:</strong> {{ r.correctAnswers }}</p>
+    <p><strong>Attempted On:</strong> 
+      {{ r.attemptedAt ? (r.attemptedAt | date:'medium') : 'Not Available' }}
+    </p>
+  </div>
+</div>
